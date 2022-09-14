@@ -17,9 +17,9 @@ function random() {
 }
 
 function all() {
-    let nicknames;
+    let nicknames = ''
     for(let i = 0; i < 6; i++){
-        nicknames = firstName.value + nicknameArray[i] + lastName.value;
+        nicknames += firstName.value + nicknameArray[i] + lastName.value + '<br>';
     }
     nickname.innerHTML = nicknames
 }
