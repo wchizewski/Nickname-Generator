@@ -11,14 +11,14 @@ let nickname = document.getElementById("nickname")
 let nicknameArray = [' "Crusher" ', ' "the Scientist" ', ' "Twinkle-toes" ', ' "the Coder" ', ' "the Jester" ', ' "the Sloth" ', ' "Quick-Silver" ']
 
 function random() {
-    let randomNickname = Math.round(Math.random() * 6)
+    let randomNickname = Math.floor(Math.random() * nicknameArray.length)
     console.log(randomNickname)
     document.getElementById("nickname").innerHTML = firstName.value + nicknameArray[randomNickname] + lastName.value;
 }
 
 function all() {
     let nicknames = ''
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < nicknameArray.length; i++){
         nicknames += firstName.value + nicknameArray[i] + lastName.value + '<br>';
     }
     nickname.innerHTML = nicknames
